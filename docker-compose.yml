@@ -1,0 +1,26 @@
+services:
+  backend:
+    build: .
+    container_name: cloud-devops-backend
+    ports:
+      - "9000:3000"   # host:container
+    environment:
+      - NODE_ENV=development
+    depends_on:
+      - db
+
+  db:
+    image: postgres:15-alpine
+    container_name: cloud-devops-db
+    restart: always
+    ports:
+      - "5432:5432"
+    environment:
+      - POSTGRES_USER=demo
+      - POSTGRES_PASSWORD=demo123
+      - POSTGRES_DB=cloud_devops_demo
+    volumes:
+      - db_data:/var/lib/postgresql/data
+
+volumes:
+  db_data:

@@ -1,0 +1,45 @@
+name: CI/CD Pipeline
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build-test-deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      # Checkout repo
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      # Setup Node.js
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: 18
+
+      # Install dependencies
+      - name: Install dependencies
+        run: npm install
+
+      # Lint
+      - name: Run lint
+        run: npm run lint
+
+      # Test
+      - name: Run tests
+        run: npm test
+
+      # Build Docker image
+      - name: Build Docker image
+        run: docker build -t cloud-devops-demo:latest .
+
+      # Deploy to Fly.io (example cloud host)
+      - name: Deploy to Fly.io
+        uses: superfly/flyctl-actions@1.4
+        with:
+          args: "deploy --remote-only"
+        env:
+          FLY_API_TOKEN: ${{ secrets.FLY_API_TOKEN }}
