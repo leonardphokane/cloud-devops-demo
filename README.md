@@ -18,3 +18,8 @@ The project demonstrates containerisation, CI/CD automation, monitoring, and doc
 - Returns JSON:  
   ```json
   { "status": "ok", "uptime": <seconds> }
+
+## Task 2: CI/CD and Monitoring
+
+This section demonstrates automated deployment with GitHub Actions and uptime monitoring.
+
