@@ -16,10 +16,20 @@ The project demonstrates containerisation, CI/CD automation, monitoring, and doc
 ### Health Check
 - Endpoint: `/health`
 - Returns JSON:  
-  ```json
+   ```json
   { "status": "ok", "uptime": <seconds> }
+
 
 ## Task 2: CI/CD and Monitoring
 
-This section demonstrates automated deployment with GitHub Actions and uptime monitoring.
+- **CI/CD Pipeline**
+  - Implemented with GitHub Actions.
+  - Runs lint, tests, build, and deploy on every push to `main`.
+  - Deploys automatically to Fly.io using the `FLY_API_TOKEN` secret.
+
+- **Monitoring**
+  - Implemented with UptimeRobot.
+  - Health endpoint: https://cloud-devops-demo.fly.dev/health
+  - Interval: 5 minutes.
+  - Alerts configured via email.
 
