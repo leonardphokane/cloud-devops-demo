@@ -16,9 +16,8 @@ The project demonstrates containerisation, CI/CD automation, monitoring, and doc
 ### Health Check
 - Endpoint: `/health`
 - Returns JSON:  
-   ```json
+  ```json
   { "status": "ok", "uptime": <seconds> }
-
 
 ## Task 2: CI/CD and Monitoring
 
@@ -33,3 +32,18 @@ The project demonstrates containerisation, CI/CD automation, monitoring, and doc
   - Interval: 5 minutes.
   - Alerts configured via email.
 
+## Task 3: Share Your Work
+
+### Demo & Presentation
+- Recorded a short demo video showing:
+  - The containerised Node.js app running on Fly.io.
+  - CI/CD pipeline execution in GitHub Actions.
+  - UptimeRobot monitoring dashboard with the `/health` endpoint.
+- Video posted on LinkedIn with a brief write‑up:
+  - Problem: Deploying and automating a containerised app with monitoring.
+  - Approach: Docker + Fly.io + GitHub Actions + UptimeRobot.
+  - Challenge: Debugging Docker build context and configuring Fly.io secrets.
+
+### Submission
+- LinkedIn post tagged **CodingAtom**.
+- Repository link included in the post for reviewers.
