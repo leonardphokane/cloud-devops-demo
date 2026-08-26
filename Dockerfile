@@ -12,8 +12,8 @@ RUN npm install
 # Copy the rest of the app source code
 COPY app ./
 
-# Expose port 3000
-EXPOSE 3000
+# Expose port 8080 (not 3000)
+EXPOSE 8080
 
 # Start the app
 CMD ["npm", "start"]
