@@ -1,6 +1,6 @@
 ![Header](images/header.png)
 
-# Cloud & DevOps Internship Project
+# 🚀 Cloud & DevOps Internship Project
 
 This repository contains my submission for the CodingAtom Cloud & DevOps Internship assessment.  
 The project demonstrates containerisation, CI/CD automation, monitoring, and documentation.
