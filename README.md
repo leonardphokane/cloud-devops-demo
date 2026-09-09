@@ -1,4 +1,4 @@
-![Header.png](images/header.png)
+![Header](images/header.png)
 
 # Cloud & DevOps Internship Project
 
@@ -50,4 +50,4 @@ The project demonstrates containerisation, CI/CD automation, monitoring, and doc
 - LinkedIn post tagged **CodingAtom**.
 - Repository link included in the post for reviewers.
 
-![Footer.png](images/footer.png)
+![Footer](images/footer.png)
